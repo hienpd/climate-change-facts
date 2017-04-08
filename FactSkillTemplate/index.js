@@ -1,8 +1,7 @@
 'use strict';
 var Alexa = require('alexa-sdk');
 
-var APP_ID = 'amzn1.ask.skill.ef5df7a4-dcca-4f10-8e6f-3b8d5c516146'
-; //OPTIONAL: replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
+var APP_ID = 'amzn1.ask.skill.ef5df7a4-dcca-4f10-8e6f-3b8d5c516146';
 var SKILL_NAME = 'Climate Change Facts';
 
 /**
@@ -89,7 +88,7 @@ var handlers = {
         this.emit(':tellWithCard', speechOutput, SKILL_NAME, randomFact)
     },
     'AMAZON.HelpIntent': function () {
-        var speechOutput = "You can say tell me a climate change fact, or, you can say exit... What can I help you with?";
+        var speechOutput = "These facts are sourced from NASA. To hear a fact, you can say tell me a climate change fact, or, you can say exit... What can I help you with?";
         var reprompt = "What can I help you with?";
         this.emit(':ask', speechOutput, reprompt);
     },
